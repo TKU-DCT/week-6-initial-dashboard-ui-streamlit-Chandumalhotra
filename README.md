@@ -53,6 +53,14 @@ Timestamp,CPU,Memory,Disk,Ping_Status,Ping_ms
 
 streamlit run app.py
 
+To quickly view the last 5 entries from `log.csv` in your terminal, run:
+
+``bash
+python read_log.py
+``
+
+This script loads `log.csv` with pandas and prints the latest 5 rows in a table format.
+
 
 ⸻
 
