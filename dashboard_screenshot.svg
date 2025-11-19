@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650">
+  <style>
+    .title { font: 28px sans-serif; fill: #111; }
+    .subtitle { font: 14px sans-serif; fill: #333; }
+    .table-header { font: 12px sans-serif; fill: #fff; }
+    .table-cell { font: 12px monospace; fill: #111; }
+    .legend { font: 12px sans-serif; }
+  </style>
+
+  <!-- Header -->
+  <text x="20" y="40" class="title">🖥️ System Monitoring Dashboard (sample)</text>
+  <text x="20" y="64" class="subtitle">Displays last 5 log entries and CPU / Memory / Disk usage over time</text>
+
+  <!-- Table (last 5 rows) -->
+  <rect x="20" y="80" width="460" height="140" fill="#f5f7fa" stroke="#ddd" />
+  <text x="30" y="100" class="table-header">Timestamp</text>
+  <text x="210" y="100" class="table-header">CPU</text>
+  <text x="270" y="100" class="table-header">Memory</text>
+  <text x="350" y="100" class="table-header">Disk</text>
+
+  <text x="30" y="122" class="table-cell">2025-10-01 12:00:00</text>
+  <text x="210" y="122" class="table-cell">15.2</text>
+  <text x="270" y="122" class="table-cell">40.1</text>
+  <text x="350" y="122" class="table-cell">58.9</text>
+
+  <text x="30" y="142" class="table-cell">2025-10-01 12:05:00</text>
+  <text x="210" y="142" class="table-cell">20.1</text>
+  <text x="270" y="142" class="table-cell">42.3</text>
+  <text x="350" y="142" class="table-cell">60.2</text>
+
+  <text x="30" y="162" class="table-cell">2025-10-01 12:10:00</text>
+  <text x="210" y="162" class="table-cell">18.9</text>
+  <text x="270" y="162" class="table-cell">41.0</text>
+  <text x="350" y="162" class="table-cell">59.8</text>
+
+  <text x="30" y="182" class="table-cell">2025-10-01 12:15:00</text>
+  <text x="210" y="182" class="table-cell">22.4</text>
+  <text x="270" y="182" class="table-cell">43.5</text>
+  <text x="350" y="182" class="table-cell">61.0</text>
+
+  <text x="30" y="202" class="table-cell">2025-10-01 12:20:00</text>
+  <text x="210" y="202" class="table-cell">19.7</text>
+  <text x="270" y="202" class="table-cell">40.8</text>
+  <text x="350" y="202" class="table-cell">60.5</text>
+
+  <!-- Chart area -->
+  <rect x="20" y="240" width="960" height="380" fill="#ffffff" stroke="#e6e6e6" />
+  <text x="40" y="270" class="subtitle">CPU / Memory / Disk Usage Over Time</text>
+
+  <!-- Axes -->
+  <line x1="120" y1="320" x2="880" y2="320" stroke="#ddd" />
+
+  <!-- Data points X positions: 150,300,450,600,750 -->
+  <!-- CPU (red) -->
+  <polyline fill="none" stroke="#d9534f" stroke-width="2" points="150,420 300,243 450,286 600,160 750,258" />
+  <!-- Memory (green) -->
+  <polyline fill="none" stroke="#5cb85c" stroke-width="2" points="150,420 300,252 450,351 600,160 750,366" />
+  <!-- Disk (blue) -->
+  <polyline fill="none" stroke="#0275d8" stroke-width="2" points="150,420 300,259 450,308 600,160 750,222" />
+
+  <!-- Points -->
+  <g>
+    <circle cx="150" cy="420" r="3" fill="#d9534f" />
+    <circle cx="300" cy="243" r="3" fill="#d9534f" />
+    <circle cx="450" cy="286" r="3" fill="#d9534f" />
+    <circle cx="600" cy="160" r="3" fill="#d9534f" />
+    <circle cx="750" cy="258" r="3" fill="#d9534f" />
+  </g>
+
+  <!-- Legend -->
+  <rect x="760" y="260" width="200" height="70" fill="#f8f9fa" stroke="#eee" />
+  <circle cx="780" cy="282" r="6" fill="#d9534f" /> <text x="796" y="287" class="legend">CPU</text>
+  <circle cx="780" cy="304" r="6" fill="#5cb85c" /> <text x="796" y="309" class="legend">Memory</text>
+  <circle cx="780" cy="326" r="6" fill="#0275d8" /> <text x="796" y="331" class="legend">Disk</text>
+
+  <!-- Footer note -->
+  <text x="20" y="640" class="subtitle">Note: This is a generated sample 'screenshot' SVG based on `log.csv`.</text>
+</svg>
